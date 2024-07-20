@@ -1,0 +1,45 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 45deg;
+    inherits: false;
+}
+
+.rotatingBoarder {
+    border-radius: 0.5rem;
+    position: relative;
+    /* width: 110%; */
+    /* height: 110%; */
+    height: fit-content;
+}
+
+.rotatingBoarder::before,
+.rotatingBoarder::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+
+    background: conic-gradient(from var(--gradient-angle), red, orange, yellow, green, cyan, blue, indigo, violet, pink, purple, red);
+    border-radius: inherit;
+    animation: rotation 10s linear infinite;
+}
+.rotatingBoarder::after {
+    filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+.innerDiv {
+    background-color: white;
+    padding: 5px;
+    border: 5px solid white;
+    border-radius: 0.5rem;
+
+    position: relative;
+    z-index: 10;
+}

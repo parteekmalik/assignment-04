@@ -1,0 +1,48 @@
+.player-card {
+    max-width: 600px;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: transparent;
+}
+.player-card:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.player-image {
+    flex-basis: 100%;
+    min-height: 7rem;
+    width: 100%;
+    background: white;
+}
+
+.player-stats {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.player-name,
+.player-position,
+.player-stats p {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+
+    background-color: white;
+}
+.player-name:hover,
+.player-position:hover,
+.player-stats p:hover {
+    color: white;
+    cursor: pointer;
+    background-color: purple;
+}
+.player-name,
+.player-position {
+    flex-grow: 1;
+    text-align: center;
+    font-size: x-large;
+    padding: 1rem 0;
+    font-weight: 500;
+}

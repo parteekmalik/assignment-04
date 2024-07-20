@@ -1,0 +1,17 @@
+canvas {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: hard-light;
+}
+
+.cointainer-blobs {
+    background: linear-gradient(46deg, pink, green);
+    border: 0.1rem solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    overflow: hidden;
+}
